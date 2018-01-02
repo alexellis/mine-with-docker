@@ -77,11 +77,13 @@ docker build -t cpu-opt:latest .
 
 ## Donate
 
-Can I ask you a question? You can follow me on Twitter [@alexellisuk](https://twitter.com/alexellisuk) or make a donation with Bitcoin or Ethereum below:
+You can follow me on Twitter [@alexellisuk](https://twitter.com/alexellisuk) or make a donation with Bitcoin or Ethereum below:
 
 Donate via BTC: 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
 
 Donate via ETH: 0x0D0c7108AD4180486E03B4Fc44AD794a209eCb37
+
+Donate via LTC: LTt4VGXJMXALgzyjw6zACRxigNADaDYNH9
 
 ## License
 
