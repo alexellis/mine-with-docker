@@ -29,27 +29,33 @@ Absolutely not.. there is no point even going there and believe me I've tried. Y
 
 It can be profitable depending on your hardware and electricity costs. If you have a single node and can get paid 2-5USD / day for instance then that's going to equate to 60-150 USD / month. Now if you actually have 20 or 50 nodes you can apply a multiplier.
 
+* What is Docker?
+
+Docker uses containers and immutable images to build and package software and all its dependencies. [Read more here](https://www.docker.com/what-docker)
+
+Try my [Hands-On Labs for Docker](https://github.com/alexellis/HandsOnDocker/blob/master/Labs.md) if you want to learn more.
+
 > Tip: If you have credits with a cloud provider or are using the Spot Instance market then this could be a way for you to generate some coin at a low cost.
 
 ## Pre-reqs
 
-We need to install Docker so that we can run a container. The container holds all the mining code and dependencies as a single immutable image.
+We need to install Docker CE so that we can run a container. The container holds all the mining code and dependencies as a single immutable image. You can install with a single line using a utility script - I generally use this with Ubuntu, but [other distributions are supported too](https://www.docker.com/community-edition).
 
-* Install Docker:
+* Install Docker CE:
 
 ```
 curl -sL get.docker.com | sh
 ```
 
-> If not running as a root user then you should look at the final message about using `usermod` to grant access to Docker to your user account.
+> If not running as a root user then you should look at the final message about using `usermod` to grant access to Docker to your user account. This may be something like `usermod alexellis -aG docker`
 
 ## Start mining
 
 Create a service and enter your bitcoin wallet ID:
 
 ```
-docker service rm miner
-docker service create --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
+docker service create --mode=global \
+  --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
   -a cryptonight \
   -o stratum+tcp://cryptonight.eu.nicehash.com:3355 \
   -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
@@ -58,6 +64,8 @@ docker service create --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
 * Replace "1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o" with your wallet ID and "cloud1" with the name of the host you're mining on if you want to track it.
 
 * If you live outside the EU then find your [nearest Stratum proxy server from Nicehash](https://www.nicehash.com/asic-mining) and replace the `eu` URL with your nearest location.
+
+* If you're running the command for the second time then remove the service with: `docker service rm miner`
 
 ## Stop/pause mining
 
@@ -89,4 +97,4 @@ Donate via LTC: LTt4VGXJMXALgzyjw6zACRxigNADaDYNH9
 
 MIT
 
-Copyright Alex Ellis 2017
+Copyright Alex Ellis 2017-2018
