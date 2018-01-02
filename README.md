@@ -26,11 +26,14 @@ Create a service and enter your bitcoin wallet ID:
 ```
 docker service rm miner
 docker service create --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
-  -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 \
+  -a cryptonight \
+  -o stratum+tcp://cryptonight.eu.nicehash.com:3355 \
   -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
 ```
 
-Replace "1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o" with your wallet ID and "cloud1" with the name of the host you're mining on if you want to track it.
+* Replace "1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o" with your wallet ID and "cloud1" with the name of the host you're mining on if you want to track it.
+
+* If you live outside the EU then find your [nearest Stratum proxy server from Nicehash](https://www.nicehash.com/asic-mining) and replace the `eu` URL with your nearest location.
 
 ## Stop/pause mining
 
