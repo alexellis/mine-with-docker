@@ -7,6 +7,24 @@ CPU mining can be profitable using algorithmns like: Cryptonight, Hodl or Equiha
 
 Disclaimer: this software is provided with no warranty. Use at your own risk. If you plan to mine on a cloud check the terms and conditions before you start. The same applies if you are using private equipment or an on-site datacenter for mining. Mining will use all the CPU resources available on the machine.
 
+## How does it work?
+
+Instead of mining BitCoin or other currencies on your own this software works by connecting your CPU / GPU to a mining pool. You get paid for the shares your computer makes towards solving a block. The NiceHash mining pool used int his example lets you mine using two dozen different algorithms and can tell you what is most profitable for your hardware.
+
+* What should I mine?
+
+At time of writing a quad-core Intel CPU would be best mining Cryptonight, Hodl or Equihash.
+
+* What is the barrier to entry?
+
+There barrier to entry is super low - you just have to have a Linux system connected to the Internet where you can install Docker. That's it. You then run the image I've already built and start accruing Bitcoins.
+
+* Is it profitable?
+
+It can be profitable depending on your hardware and electricity costs. If you have a single node and can get paid 2-5USD / day for instance then that's going to equate to 60-150 USD / month. Now if you actually have 20 or 50 nodes you can apply a multiplier.
+
+> Tip: If you have credits with a cloud provider or are using the Spot Instance market then this could be a way for you to generate some coin at a low cost.
+
 ## Pre-reqs
 
 We need to install Docker so that we can run a container. The container holds all the mining code and dependencies as a single immutable image.
@@ -54,6 +72,7 @@ docker build -t cpu-opt:latest .
 ## Donate
 
 Donate via BTC: 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
+
 Donate via ETH: 0x0D0c7108AD4180486E03B4Fc44AD794a209eCb37
 
 Copyright Alex Ellis 2017
