@@ -57,13 +57,29 @@ curl -sL https://get.docker.com | sh
 
 Create a service and enter your bitcoin wallet ID:
 
+* Mine Cryptonight
+
 ```
 docker service create --mode=global \
   --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
   -a cryptonight \
-  -o stratum+tcp://cryptonight.eu.nicehash.com:3355 \
+  -o stratum+tcp://cryptonight.usa.nicehash.com:3355 \
   -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
 ```
+
+* Mine Hodl
+
+```
+docker service create --mode=global \
+  --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
+  -a hodl \
+  -o stratum+tcp://hodl.usa.nicehash.com:3352 \
+  -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
+```
+
+**You must replace "usa" with your location such as "hk" or "eu", read on.**
+
+> Tip : If you are planning on using an Atom processor you will need to rebuild the image using the instructions below. Atom CPUs are not advised for mining.
 
 * Replace "1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o" with your wallet ID and "cloud1" with the name of the host you're mining on if you want to track it.
 
