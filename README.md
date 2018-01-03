@@ -57,16 +57,6 @@ curl -sL https://get.docker.com | sh
 
 Create a service and enter your bitcoin wallet ID:
 
-* Mine Cryptonight
-
-```
-docker service create --mode=global \
-  --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
-  -a cryptonight \
-  -o stratum+tcp://cryptonight.usa.nicehash.com:3355 \
-  -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
-```
-
 * Mine Hodl
 
 ```
@@ -74,6 +64,16 @@ docker service create --mode=global \
   --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
   -a hodl \
   -o stratum+tcp://hodl.usa.nicehash.com:3352 \
+  -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
+```
+
+* Mine Cryptonight
+
+```
+docker service create --mode=global \
+  --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
+  -a cryptonight \
+  -o stratum+tcp://cryptonight.usa.nicehash.com:3355 \
   -u 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1
 ```
 
