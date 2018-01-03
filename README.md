@@ -83,6 +83,21 @@ cd mine-with-docker/cpu-opt
 docker build -t cpu-opt:latest .
 ```
 
+## Monitor your balance / workers
+
+You can use the nicehash UI to monitor your balance and predicted payout. Mining pools generally wait until you reach a certain (low) balance before sending an automatic transfer to your wallet.
+
+Here's an example with my dontation address:
+
+```
+https://www.nicehash.com/miner/1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
+```
+
+Nicehash and many other mining pools have [their own HTTP APIs](https://www.nicehash.com/doc-api) where you can programatically query your hashing rate, balance and list of connected workers.
+
+> Tip: You can use different mining pools simply by adjusting the stratum URL passed in via the `-o` flag to the container.
+
+
 ## Donate
 
 You can follow me on Twitter [@alexellisuk](https://twitter.com/alexellisuk) or make a donation with Bitcoin or Ethereum below:
