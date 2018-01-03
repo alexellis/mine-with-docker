@@ -17,6 +17,10 @@ Instead of mining BitCoin or other currencies on your own this software works by
 
 At time of writing a quad-core Intel CPU would be best mining Cryptonight, Hodl or Equihash.
 
+* How do I get a wallet?
+
+You can sign-up for a wallet at [blockchain.info](https://blockchain.info) or [coinbase.com](https://www.coinbase.com/). When you create a wallet you can then click "receive funds" or similar to generate a new address for the wallet.
+
 * What is the barrier to entry?
 
 There barrier to entry is super low - you just have to have a Linux system connected to the Internet where you can install Docker. That's it. You then run the image I've already built and start accruing Bitcoins.
