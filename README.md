@@ -48,7 +48,7 @@ We need to install Docker CE so that we can run a container. The container holds
 * Install Docker CE:
 
 ```
-curl -sL get.docker.com | sh
+curl -sL https://get.docker.com | sh
 ```
 
 > If not running as a root user then you should look at the final message about using `usermod` to grant access to Docker to your user account. This may be something like `usermod alexellis -aG docker`
@@ -79,13 +79,17 @@ To completely stop mining use `docker service rm miner`
 
 ## Rebuild the image
 
-This is optional. If you need to rebuild the Docker image for updates or for a different CPU architecture:
+This is optional and not recommended for beginners.
+
+If you need to rebuild the Docker image for updates or for a different CPU architecture/variation such as an Atom CPU:
 
 ```
 git clone https://github.com/alexellis/mine-with-docker
 cd mine-with-docker/cpu-opt
 docker build -t cpu-opt:latest .
 ```
+
+After rebuilding the image swap out `alexellis2/cpu-opt:2018-1-2` for `cpu-opt:latest` or whatever you chose to call it in the `docker build` command.
 
 ## Monitor your balance / workers
 
