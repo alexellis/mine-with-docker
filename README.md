@@ -33,6 +33,20 @@ Absolutely not.. there is no point even going there and believe me I've tried. Y
 
 It can be profitable depending on your hardware and electricity costs. If you have a single node and can get paid 2-5USD / day for instance then that's going to equate to 60-150 USD / month. Now if you actually have 20 or 50 nodes you can apply a multiplier.
 
+* Where have you tested this?
+
+Tested on cloud:
+
+- [Packet.net Type 1 / 1E / 2](https://www.packet.net)
+- [Packet.net Type 0 - rebuild for Atom](https://www.packet.net)
+- [Civo](https://www.civo.com)
+
+Own hardware:
+
+- MacBook Pro 13" touchbar i5
+- Intel Nuc i5 Gen 5
+- Dell Optiplex Intel i7
+
 * What is Docker?
 
 Docker uses containers and immutable images to build and package software and all its dependencies. [Read more here](https://www.docker.com/what-docker)
