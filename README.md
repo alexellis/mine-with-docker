@@ -140,11 +140,12 @@ Nicehash and many other mining pools have [their own HTTP APIs](https://www.nice
 
 You can follow me on Twitter [@alexellisuk](https://twitter.com/alexellisuk) or make a donation with Bitcoin or Ethereum below:
 
-Donate via BTC: 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
+Donate via:
 
-Donate via ETH: 0x0D0c7108AD4180486E03B4Fc44AD794a209eCb37
-
-Donate via LTC: LTt4VGXJMXALgzyjw6zACRxigNADaDYNH9
+* BTC: 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
+* Bitcoin Cash: 1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
+* ETH: 0x0D0c7108AD4180486E03B4Fc44AD794a209eCb37
+* LTC: LTt4VGXJMXALgzyjw6zACRxigNADaDYNH9
 
 ## License
 
