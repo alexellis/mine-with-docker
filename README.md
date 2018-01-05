@@ -35,11 +35,7 @@ It can be profitable depending on your hardware and electricity costs. If you ha
 
 * Where have you tested this?
 
-Tested on cloud:
-
-- [Packet.net Type 1 / 1E / 2](https://www.packet.net)
-- [Packet.net Type 0 - rebuild for Atom](https://www.packet.net)
-- [Civo](https://www.civo.com)
+Tested on cloud, but as I mentioned - check T&Cs before starting. You take full responsibility for any breach of T&Cs.
 
 Own hardware:
 
