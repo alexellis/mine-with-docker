@@ -121,7 +121,7 @@ After rebuilding the image swap out `alexellis2/cpu-opt:2018-1-2` for `cpu-opt:l
 
 You can use the nicehash UI to monitor your balance and predicted payout. Mining pools generally wait until you reach a certain (low) balance before sending an automatic transfer to your wallet.
 
-Here's an example with my dontation address:
+Here's an example with my donation address:
 
 ```
 https://www.nicehash.com/miner/1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o
