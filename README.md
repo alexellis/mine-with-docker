@@ -63,6 +63,18 @@ curl -sL https://get.docker.com | sh
 
 > If not running as a root user then you should look at the final message about using `usermod` to grant access to Docker to your user account. This may be something like `usermod alexellis -aG docker`
 
+* Setup Docker Swarm
+
+We will be using Docker Swarm to control the container we're using for mining.
+
+Type in the following:
+
+```
+docker swarm init
+```
+
+> If this command complains about `--advertise-addr` - then pass `--advertise-addr=127.0.0.1`.
+
 ## Start mining
 
 Create a service and enter your bitcoin wallet ID:
