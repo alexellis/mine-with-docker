@@ -7,7 +7,7 @@ CPU mining can be profitable using algorithmns like: Cryptonight, Hodl or Equiha
 
 Disclaimer: this software is provided with no warranty. Use at your own risk. If you plan to mine on a cloud check the terms and conditions before you start. The same applies if you are using private equipment or an on-site datacenter for mining.
 
-> Tip: Mining will use all the CPU resources available on the machine so do not run it where you have critical applications.
+> Tip: Mining will use all the CPU resources available on the machine so do not run it where you have critical applications. If you want you can limit the CPU usage using the `--limit-cpu` option for `docker service create` command.
 
 ## How does it work?
 
