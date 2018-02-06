@@ -111,7 +111,10 @@ docker service create --mode=global \
 
 ## Limiting CPU usage
 
-If you want you can limit the CPU usage using the `--limit-cpu` option for `docker service create` command.
+This is a community suggestion from @linuxjuggler. 
+
+
+If you want you can limit the CPU usage using the `--limit-cpu` option in the `docker service create` command.
 
 Also its worth mentionining that you can limit the CPU core usage by selecting which cores to target via 
 
@@ -121,8 +124,9 @@ docker run alexellis2/cpu-opt:2018-1-2 ./cpuminer --help:
       --cpu-priority    set process priority (default: 0 idle, 2 normal to 5 highest)
 ```
 
-This is good if you are running the script on a VPS provider who have a policy against using the CPU for intensive work for long time, so if by limiting the CPU usage using Docker option, _this may and may not_, prevent this provider from terminating your account, plus he will be able to use the system for something else other than just mining.
+@linuxjuggler writes:
 
+> Limiting the amount of CPU or number of cores being used may mean you can continue to use the system for other purposes. It is also less likely to trigger a high CPU alert if you are running monitoring software.
 
 ## Stop/pause mining
 
