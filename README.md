@@ -7,7 +7,7 @@ CPU mining can be profitable using algorithmns like: Cryptonight, Hodl or Equiha
 
 Disclaimer: this software is provided with no warranty. Use at your own risk. If you plan to mine on a cloud check the terms and conditions before you start. The same applies if you are using private equipment or an on-site datacenter for mining.
 
-> Tip: Mining will use all the CPU resources available on the machine so do not run it where you have critical applications. If you want you can limit the CPU usage using the `--limit-cpu` option for `docker service create` command.
+> Tip: Mining will use all the CPU resources available on the machine so do not run it where you have critical applications.
 
 ## How does it work?
 
@@ -108,6 +108,21 @@ docker service create --mode=global \
 * If you live outside the EU then find your [nearest Stratum proxy server from Nicehash](https://www.nicehash.com/asic-mining) and replace the `eu` URL with your nearest location.
 
 * If you're running the command for the second time then remove the service with: `docker service rm miner`
+
+## Limiting CPU usage
+
+If you want you can limit the CPU usage using the `--limit-cpu` option for `docker service create` command.
+
+Also its worth mentionining that you can limit the CPU core usage by selecting which cores to target via 
+
+```
+docker run alexellis2/cpu-opt:2018-1-2 ./cpuminer --help:
+      --cpu-affinity    set process affinity to cpu core(s), mask 0x3 for cores 0 and 1
+      --cpu-priority    set process priority (default: 0 idle, 2 normal to 5 highest)
+```
+
+This is good if you are running the script on a VPS provider who have a policy against using the CPU for intensive work for long time, so if by limiting the CPU usage using Docker option, _this may and may not_, prevent this provider from terminating your account, plus he will be able to use the system for something else other than just mining.
+
 
 ## Stop/pause mining
 
