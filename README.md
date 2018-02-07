@@ -82,7 +82,7 @@ Create a service and enter your bitcoin wallet ID:
 * Mine Hodl
 
 ```
-docker service create --mode=global \
+docker service create \
   --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
   -a hodl \
   -o stratum+tcp://hodl.usa.nicehash.com:3352 \
@@ -92,7 +92,7 @@ docker service create --mode=global \
 * Mine Cryptonight
 
 ```
-docker service create --mode=global \
+docker service create \
   --name miner alexellis2/cpu-opt:2018-1-2 ./cpuminer \
   -a cryptonight \
   -o stratum+tcp://cryptonight.usa.nicehash.com:3355 \
